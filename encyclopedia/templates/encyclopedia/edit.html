@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% load markdownify %}
+{% block title %}
+    Edit
+{% endblock title %}
+{% block body %}
+<h1>You can edit entry</h1>
+    <form action="" method="POST" id="edit">
+        {% csrf_token %}
+        <textarea rows="4" cols="20" name="content" form="edit">{{content}}</textarea>
+        <input type="submit" value="Edit">
+    </form>
+{% endblock %}
